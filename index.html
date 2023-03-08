@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tareas de VersionDo</title>
+    <link rel="stylesheet" href="style1.css">
+</head>
+<body>
+    <header>
+        <div class="header-left">
+            <div class="logo">
+                <img src="./logo.png" alt="VersionDoLogo">
+            </div>
+            <nav>
+                <ul>
+                   
+                    <li>
+                        <a href="index1.html">Notas</a>
+                    </li>
+                    <li>
+                        <a href="index2.html">Suma</a>
+                    </li>
+                    <li>
+                        <a href="index3.html">Fahrenheit a Celsius</a>
+                    </li>
+                    <li>
+                        <a href="index4.html">Número mayor</a>
+                    </li>
+                    <li>
+                        <a href="index5.html">Contador</a>
+                    </li>
+                    <li>
+                        <a href="index6.html">Número par o impar</a>
+                    </li>
+                </ul>
+               
+            </nav>
+        </div>
+    
+            <div class="hamburger">
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+        </div>
+    </header>
+    <script>
+        hamburger = document.querySelector(".hamburger");
+        nav = document.querySelector("nav");
+        hamburger.onclick = function() {
+            nav.classList.toggle("active");
+        }
+    </script>
+</body>
+</html>

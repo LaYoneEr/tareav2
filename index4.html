@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Encontrar el número mayor</title>
+    <link rel="stylesheet" href="style1.css">
+    <header>
+      <div class="header-left">
+          <div class="logo">
+              <img src="./logo.png" alt="VersionDoLogo">
+          </div>
+          <nav>
+              <ul>
+                  
+                  <li>
+                      <a href="index1.html">Notas</a>
+                  </li>
+                  <li>
+                      <a href="index2.html">Suma</a>
+                  </li>
+                  <li>
+                      <a href="index3.html">Fahrenheit a Celsius</a>
+                  </li>
+                  <li>
+                      <a href="index4.html">Número mayor</a>
+                  </li>
+                  <li>
+                      <a href="index5.html">Contador</a>
+                  </li>
+                  <li>
+                      <a href="index6.html">Número par o impar</a>
+                  </li>
+              </ul>
+             
+          </nav>
+      </div>
+  
+          <div class="hamburger">
+              <div></div>
+              <div></div>
+              <div></div>
+          </div>
+      </div>
+  </header>
+  <script>
+      hamburger = document.querySelector(".hamburger");
+      nav = document.querySelector("nav");
+      hamburger.onclick = function() {
+          nav.classList.toggle("active");
+      }
+  </script>
+    <style>
+             
+      body {
+        font-family: Arial, sans-serif;
+        background-color: #f2f2f2;
+      }
+      h1 {
+        text-align: center;
+        color: #333;
+        padding-top: 15px;
+      }
+      label {
+        display: block;
+        margin-bottom: 10px;
+        color: #333;
+      }
+      input[type="number"] {
+        padding: 8px;
+        border-radius: 5px;
+        border: 1px solid #ccc;
+        font-size: 16px;
+        width: 50%;
+        box-sizing: border-box;
+      }
+      button {
+        background-color: #6bbe57;
+        color: #fff;
+        border-radius: 5px;
+        border: none;
+        padding: 10px 16px;
+        font-size: 13px;
+        cursor: pointer;
+        margin-top: 10px;
+        
+      }
+      button:hover {
+        background-color: #3e8e41;
+      }
+      p {
+        font-size: 20px;
+        color: #333;
+        margin-top: 20px;
+      }
+      span {
+        font-weight: bold;
+        color: #4CAF50;
+      }
+      .p-input{
+        margin-top: 18px;
+        font-weight: 600;
+        letter-spacing: 1px;
+        font-size: 18px;
+        
+        
+      }
+      .barra{
+        margin-top: 16px;
+      }
+      .barra-2{
+        margin-top: 10px;
+      }
+      .barra-3{
+        margin-top: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Encontrar el número mayor</h1>
+    <p class="p-input">Ingrese tres números y presione el botón para encontrar el mayor:</p>
+    <input type="number" id="num1" class="barra">
+    <input type="number" id="num2" class="barra-2">
+    <input type="number" id="num3" class="barra-3">
+    <br>
+    <button onclick="encontrarMayor()">Encontrar mayor</button>
+    <br>
+    <p id="resultado"></p>
+    <script>
+      function encontrarMayor() {
+        const num1 = Number(document.getElementById("num1").value);
+        const num2 = Number(document.getElementById("num2").value);
+        const num3 = Number(document.getElementById("num3").value);
+
+        let mayor = num1;
+
+        if (num2 > mayor) {
+          mayor = num2;
+        }
+
+        if (num3 > mayor) {
+          mayor = num3;
+        }
+
+        document.getElementById("resultado").textContent = `El número mayor es: ${mayor}`;
+      }
+    </script>
+  </body>
+</html>
